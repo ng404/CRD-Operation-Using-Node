@@ -197,7 +197,7 @@ router.delete('/delete/:key',(req,res)=>{
             }
             let data2 = JSON.stringify(file_content, null, 2);
             fs.writeFileSync(path, data2);
-            return res.json(file_content);
+            return res.json({"Result":"Delete Successfull","Current File Contents":file_content});
         }                
     });
 
